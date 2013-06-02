@@ -1,0 +1,10 @@
+triangles n = [(a,b,c) 
+				| c<-[1..n]
+				, b<-[1..c]
+				, a<-[1..b]
+				, a^2 + b^2 == c^2]
+
+main = do
+	print (triangles 10)
+	print (triangles 15)
+	print (triangles 100)
