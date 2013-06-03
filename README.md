@@ -15,3 +15,6 @@ Y = λf.(λx.f (x x)) (λx.f (x x))
 
 operators:
 http://www.imada.sdu.dk/~rolf/Edu/DM22/F06/haskell-operatorer.pdf
+
+Data-List functions:
+http://www.haskell.org/ghc/docs/latest/html/libraries/base//Data-List.html
