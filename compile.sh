@@ -25,9 +25,6 @@ else
 	echo "no input file was selected"
 fi
 
-if [ -f *.hi ]; then
-	rm *.hi
-fi
-if [ -f *.o ]; then
-	rm *.o
-fi
+rm -f *.hi
+rm -f *.o
+
