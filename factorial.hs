@@ -43,21 +43,6 @@ y f     = f (y f)
 cond p f g x = if p x then f x else g x
 fac9  = y (b (cond ((==) 0) (k 1)) (b (s (*)) (c b pred)))
 
--- list encoding
-arb = ()
-
-listenc n = replicate n arb
-listprj f = length . f . listenc
-
-listprod xs ys = [ i (x,y) | x<-xs, y<-ys ]
-                 where i _ = arb
-
-facl []         = listenc  1
-facl n@(_:pred) = listprod n (facl pred)
-
-fac10 = listprj facl
-
-
 main = do
 	print (fac1 42)
 	print (fac2 42)
@@ -68,6 +53,4 @@ main = do
 	print (fac7 42)
 	print (fac8 42)
 	print (fac9 42)
-	print (fac10 42)
-
 

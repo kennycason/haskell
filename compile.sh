@@ -9,7 +9,7 @@ if [ "$IN" != "" ]; then
 	fi
 
 	# -package haskell98
-	ghc -threaded  -o $OUT $IN
+	ghc -threaded -o $OUT $IN
 
 	i=0
 	for arg in "$@"
@@ -19,8 +19,11 @@ if [ "$IN" != "" ]; then
 		fi
 		i=$[i+1]
 	done
-	echo "running: "$OUT
-	./$OUT
+	if [ -f $OUT ]; then
+		echo "running: "$OUT
+		./$OUT
+	fi
+
 else
 	echo "no input file was selected"
 fi
