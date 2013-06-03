@@ -26,3 +26,8 @@ http://www.haskell.org/haskellwiki/Monad_Laws
 http://en.wikipedia.org/wiki/Category_theory
 
 "A monad in X is just a monoid in the category of endofunctors of X, with product × replaced by composition of endofunctors and unit set by the identity endofunctor." - Mac Lane, hehe
+
+
+examples:
+Snake game using SDL
+https://github.com/CGenie/haskell-snake
