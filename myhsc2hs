@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "/usr/local/bin/hsc2hs -v --cc=gcc --ld=gcc --lflag="-L/sw/lib -lSDLmain -framework AppKit -framework SDL" $@"
+/usr/local/bin/hsc2hs -v --cc=gcc --ld=gcc --lflag="-L/sw/lib" --lflag="-lSDLmain" --lflag="-framework" --lflag="AppKit" --lflag="-framework" --lflag="SDL" "$@"
